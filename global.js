@@ -1,3 +1,4 @@
+
 var shortcuts = function(year,kod_zavodu){
     this.zavod = 'zavod_'+kod_zavodu+'_'+year;
     this.kategorie = 'kategorie_'+year;
