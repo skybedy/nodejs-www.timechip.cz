@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr">
+<head>{{> head }}</head>
+<body>
+<div class="wrapper">
+    {{> navbar }}
+    {{> underbar }}
+    <div class="content">
+        <div class="row">
+            <div class="container">
+                <div class="col-lg-6">
+                    <div class="panel panel-default contact">
+                        <div class="hlaska"></div>
+
+                        <div class="panel-body">
+                            <h5>Kontaktní formulář</h5>
+                            <div id="form-contact-wrapper">
+                                <form id="form-contact">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="jmeno" placeholder="Jméno a příjmení" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="tel" class="form-control" name="telefon" placeholder="Telefon" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email" placeholder="E-mail" />
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="zprava" class="form-control" rows="10" placeholder="Váš text"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-default testtest">Odeslat</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel panel-default contact">
+                        <div class="panel-body">
+                            <h5>Kontaktní údaje</h5>
+                            <address>
+                                <h6>Fakturační adresa</h6>
+                                <i class="fontello-contact icon-home"></i><strong>Visalajka, s.r.o.</strong><br />
+                                Františkova 903/1<br />
+                                198 00 Praha 9
+                                <h6>Identifikační údaje</h6>
+                                IČ: 25834525<br />
+                                DIČ:CZ25834525
+                                <h6>Doručovací adresa</h6>
+                                <i class="fontello-contact icon-home"></i><strong>Visalajka, s.r.o.</strong><br />
+                                Visalaje 0550<br />
+                                739 04 Krásná<br /><br />
+                                <i class="fontello-contact icon-phone"></i>+420 776131313<br />
+                                <i class="fontello-contact icon-mail"></i><a href="mailto:info@timechip.cz">info@timechip.cz</a>
+
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main"></div>
+    </div>
+    {{> footer }}
+</div>

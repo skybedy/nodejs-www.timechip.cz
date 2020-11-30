@@ -1,0 +1,14 @@
+<div class="container">
+    <table class="table table-striped table-bordered table-hover">
+        {{#each data}}
+            <tr>
+                <td>{{@index}}</td>
+                <td>{{jmeno}}</td>
+                <td>{{rocnik}}</td>
+                <td>{{nazev_kategorie}}</td>
+                <td>{{time_count}}</td>
+                {{{test lap_time time_count}}}
+            </tr>
+        {{/each}}
+    </table>
+</div>

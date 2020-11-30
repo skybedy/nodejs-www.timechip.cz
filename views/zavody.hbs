@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr">
+<head>{{> head }}</head>
+<body>
+<div class="wrapper">
+{{> navbar }}
+{{> underbar }}
+    <div class="content">
+        <div class="container">
+            {{#if data}}
+                <table class="table table-hover">
+                    <!--<thead>
+                    <tr class="header">
+                        <td>Název</td>
+                        <td>Místo</td>
+                        <td>Datum</td>
+                        <td>Sport</td>
+                    </tr>
+                    </thead>-->
+                    {{#each data}}
+                        <tr>
+                            <td>{{nazev_zavodu}}</td>
+                            <td>{{misto_zavodu}}</td>
+                            {{#if datum_zavodu_konec}}
+                                <td>{{den_zavodu}} - {{datum_zavodu_konec}}</td>
+                            {{else}}
+                                <td>{{datum}}</td>
+                            {{/if}}
+                            <td>{{typ_zavodu}}</td>
+                            {{#if web}}
+                                <td><a target="_blank" href="http://{{web}}">WWW</a></td>
+                            {{else}}
+                                <td>&nbsp;</td>
+                            {{/if}}
+                            {{#if prihlasky}}
+                                <td><a target="_blank" href="http://entry.timechip.cz">Přihlášky</a></td>
+                            {{else}}
+                                <td>&nbsp;</td>
+                            {{/if}}
+                            {{#if nove_vysledky}}
+                                <td><a target="_blank" href="http://vysledky.timechip.cz/#{{year}}/{{id_zavodu}}">Výsledky</a></td>
+                            {{else}}
+                                <td>&nbsp;</td>
+                            {{/if}}
+                        </tr>
+                    {{/each}}
+                </table>
+            {{else}}
+                <p>Ještě nejsou žádné závody.</p>
+            {{/if}}
+        </div>
+    </div>
+{{> footer }}
+</div>

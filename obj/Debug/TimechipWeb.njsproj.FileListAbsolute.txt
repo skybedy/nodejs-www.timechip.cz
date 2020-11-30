@@ -1,0 +1,3 @@
+C:\webapps\timechip-node-backbone-handlebars\obj\Debug\TimechipWeb.njsprojAssemblyReference.cache
+C:\webapps\timechip-node-backbone-handlebars\obj\Debug\TimechipWeb.njsproj.CoreCompileInputs.cache
+C:\webapps\timechip-node-backbone-handlebars\bin\Microsoft.NodejsTools.WebRole.dll

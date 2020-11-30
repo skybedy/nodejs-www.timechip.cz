@@ -1,0 +1,220 @@
+body {
+  padding-top: 50px;
+  font-family: "Open Sans", "Helvetica Neue", Arial, verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #696969;
+  font-weight: 300;
+}
+.navbar-default {
+  background-color: #ffffff;
+  border-color: #e1e1e1;
+}
+.navbar-default .navbar-brand {
+  color: #606060;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #8080ff;
+}
+.navbar-default .navbar-text {
+  color: #666666;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #222222;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #8080ff;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #8080ff;
+  background-color: #ffffff;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #8080ff;
+  background-color: #ffffff;
+}
+.navbar-default .navbar-toggle {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #606060;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #606060;
+}
+.navbar-default .navbar-link {
+  color: #606060;
+}
+.navbar-default .navbar-link:hover {
+  color: #8080ff;
+}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #606060;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #8080ff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #8080ff;
+    background-color: #ffffff;
+  }
+}
+.navbar-brand {
+  marin-left: -20px;
+  padding: 7px 15px;
+  height: auto;
+}
+.navbar-brand img {
+  border: 0;
+  display: block;
+  height: 34px;
+}
+.underbar {
+  margin-bottom: 30px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #e1e1e1;
+}
+.underbar h1 {
+  margin: 15px 50px 15px 0;
+  font-size: 20px;
+  float: left;
+}
+.heading h2 {
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 18px;
+}
+.content {
+  margin-top: 10px;
+}
+.glyphicon-calendar,
+.glyphicon-list-alt,
+.fa {
+  font-size: 30px;
+  float: right;
+  margin-top: 4px;
+  margin-right: 2px;
+  color: rgba(105, 105, 105, 0.84);
+}
+.fontello {
+  font-size: 30px;
+  float: right;
+  margin-top: -2px;
+  marg-right: -2px;
+  color: rgba(105, 105, 105, 0.84);
+}
+.fontello-contact {
+  font-size: 14px;
+  marin-top: -1px;
+  margin-right: 2px;
+  margin-left: -3px;
+  color: rgba(105, 105, 105, 0.84);
+  float: left;
+}
+.boxwrapper,
+.homepage-imagewrapper {
+  border: 1px solid #e1e1e1;
+  background: #f9f9f9;
+}
+.homepage-imagewrapper {
+  magin: 8px -11px 0 -11px;
+}
+.boxwrapper .thumbnail {
+  margin: 2px;
+  padding: 0 10px;
+}
+.homepage-imagewrapper .thumbnail {
+  margin: 2px;
+  padding: 0;
+}
+.next-events-heading {
+  padding: 9px 0 10px 0;
+  backgrund: red;
+}
+.next-event-box {
+  adding: 7px 0;
+  border-top: 1px solid #e1e1e1;
+}
+.race-type-icon-wrapper {
+  margin: 0 8px 0 -4px;
+  float: left;
+}
+.next-event-box a {
+  padding: 7px 0;
+  text-decoration: none;
+  color: #696969;
+  display: block;
+  bacground: red;
+  heigt: 74px;
+}
+.next-event-box a:hover {
+  background: #f9f9f9;
+}
+.footer {
+  margin: 40px 0 0 0;
+  border-top: 1px solid #e1e1e1;
+  padding: 10px 0;
+  text-align: center;
+}
+.indexbox {
+  margin: 2px;
+}
+.indexbox h4 {
+  float: left;
+  margin-left: 10px;
+}
+.rss-item {
+  height: 56px;
+  overflow: hidden;
+}
+.list-twitter {
+  height: 82px;
+}
+.list-twitter a {
+  color: #696969;
+  font-weight: 500;
+}
+.list-twitter .twitter-user-name {
+  font-weight: 600;
+}
+.our-news h3 {
+  text-decoration: underline;
+  font-size: 14px;
+  margin: 0;
+  font-weight: bold;
+  line-height: 20px;
+}
+.our-news p {
+  margin-bottom: 0;
+  line-height: 19px;
+}
+.contact {
+  background: #f9f9f9;
+  border: 1px solid #e1e1e1;
+}
+.contact h5 {
+  border-bottom: 4px double #eee;
+  padding-bottom: 10px;
+  font-size: 20px;
+  line-height: 25px;
+}
+.contact a {
+  color: #696969;
+}
+.underline{
+  text-decoration: underline;
+  color:red;
+}

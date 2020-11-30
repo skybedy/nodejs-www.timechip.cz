@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr">
+<head>{{> head }}</head>
+<body>
+</body>
+<div class="wrapper">
+    {{> navbar }}
+    {{> underbar }}
+        <div class="content">
+            <div class="container">
+                {{#if data}}
+                    <table class="table table-hover">
+                        <thead>
+                            <th>Název</th>
+                            <th>Datum konání</th>
+                            <th colspan="2">Místo konání</th>
+                        </thead>
+                        {{#each data}}
+                            <tr>
+                                <td>{{nazev_zavodu}}</td>
+                                <td>{{datum}}</td>
+                                <td>{{misto_zavodu}}</td>
+                                <td><a href="/vysledky/{{ToDash kod_zavodu}}/{{rok_zavodu}}/{{id_zavodu}}">www</a></td>
+                            </tr>
+                        {{/each}}
+                    </table>
+                {{else}}
+                    <p>Tento rok ještě nejsou žádné výsledky k dispozici.</p>
+                {{/if}}
+            </div>
+        </div>
+
+    {{> footer }}
+</div>

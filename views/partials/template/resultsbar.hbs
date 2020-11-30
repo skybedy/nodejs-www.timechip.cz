@@ -1,0 +1,43 @@
+<form class="form-inline" style="margin-bottom:10px">
+
+    {{#if events_list}}
+        <div class="form-group">
+            <select id="results_type" class="form-control">
+                {{#each events_list}}
+                    <option value="">{{nazev}}</option>
+                {{/each}}
+            </select>
+        </div>
+    {{/if}}
+
+
+
+
+
+
+    {{#if results_type_select}}
+        <div class="form-group">
+            <select id="results_type" class="form-control">
+                {{#each results_type_select}}
+                    {{#if bez_kategorii}}
+                        <option value="ResultsOverall">Celkově</option>
+                    {{/if}}
+                    {{#if podle_kategorii}}
+                        <option value="ResultsCategory">Podle kategorí</option>
+                    {{/if}}
+                    {{#if podle_pohlavi}}
+                        <option value="ResultsGender">Podle pohlaví</option>
+                    {{/if}}
+                    {{#if podle_ročníků}}
+                        <option value="ResultsBirthYear">Podle ročníků</option>
+                    {{/if}}
+                {{/each}}
+            </select>
+        </div>
+    {{/if}}
+
+
+
+
+
+</form>

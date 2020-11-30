@@ -1,0 +1,169 @@
+<div class="container">
+    <div class="footer">
+        TimeChip.cz 2004-2018
+    </div>
+</div>
+<script type="text/javascript" src="/js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="/js/jquery.twitter.autolink.min.js"></script>
+<script type="text/javascript" src="/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/js/messages_cs.min.js"></script>
+<script type="text/javascript" src="/js/underscore.js"></script>
+<script type="text/javascript" src="/js/backbone.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"></script>
+<script type="text/javascript" src="/js/default.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".twee").twitter_autolink();
+
+        $('.bxslider').bxSlider({
+            auto:true,
+            mode:'fade',
+            pager:false,
+            controls:false,
+            speed:5000,
+            useCSS:false,
+            randomStart:true
+        });
+
+
+        $('form').validate({
+            rules: {
+                jmeno: {
+                    minlength: 2,
+                    maxlength: 50,
+                    required: true
+                },
+                telefon: {
+                    minlength: 9,
+                    maxlength: 30,
+                    required: true
+                },
+                email: {
+                    required: true,
+                    email: true,
+                    minlength: 5,
+                    maxlength: 100
+                },
+                zprava: {
+                    minlength: 5,
+                    required: true
+                }
+            },
+
+
+            highlight: function(element) {
+                $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function(element) {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            errorElement: 'span',
+            errorClass: 'help-block',
+            errorPlacement: function(error, element) {
+                if(element.parent('.input-group').length) {
+                    error.insertAfter(element.parent());
+                } else {
+                    error.insertAfter(element);
+                }
+            }
+        });
+
+    })
+</script>
+<script>
+    //Backbone.emulateHTTP = true;
+    //Backbone.emulateJSON= true;
+    $.fn.serializeObject = function() {
+    var o = {};
+    var a = this.serializeArray();
+    $.each(a, function() {
+        if (o[this.name] !== undefined) {
+            if (!o[this.name].push) {
+                o[this.name] = [o[this.name]];
+            }
+            o[this.name].push(this.value || '');
+        } else {
+            o[this.name] = this.value || '';
+        }
+    });
+    return o;
+};
+
+var Contact = Backbone.Model.extend({
+   //urlRoot: '/kontakt/kontaktni-formular'
+   url: '/kontakt/kontaktni-formular'
+});
+
+var FormContact = Backbone.View.extend({
+    el: '#form-contact-wrapper',
+    events : {
+        'submit #form-contact' : 'formContactHandler'
+    },
+    formContactHandler : function(ev){
+        var messageDetails = $(ev.currentTarget).serializeObject();
+
+        var self = this;
+        this.model.fetch({data:messageDetails}).done(function(res){
+            self.render(res);
+        });
+        ev.preventDefault();
+    },
+
+    render: function(res){
+        this.$el.html('<p>'+res.zprava+'</p>');
+    }
+
+});
+
+
+var contact = new Contact();
+var formContact = new FormContact({
+    model: contact
+});
+
+/*
+    var FormContact = Backbone.View.extend({
+        el: '#form-contact-wrapper',
+        events : {
+            'submit #form-contact' : 'formContactHandler'
+        },
+        formContactHandler : function(ev){
+
+            var messageDetails = $(ev.currentTarget).serializeObject();
+            this.render();
+            ev.preventDefault();
+        },
+
+        render: function(){
+            var contact = new Contact();
+            contact.fetch().done(function(res){
+                this.$el.html('koko');
+            });
+        }
+
+    });
+
+
+   ;
+    var formContact = new FormContact();
+*/
+Backbone.history.start();
+</script>
+<script>
+
+    /*
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-2563102-9', 'auto');
+    ga('send', 'pageview');
+    */
+</script>
+</body>
+</html>
+

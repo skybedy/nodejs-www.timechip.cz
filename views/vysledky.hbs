@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr">
+<head>{{> head }}</head>
+<body>
+
+{{#each data.ja}}
+    <p>{{prijmeni}}</p>
+{{/each}}
+
+{{#each tym}}
+    <p>{{nazev_tymu}}</p>
+{{/each}}
+
+
+
+
+
+<div class="wrapper">
+    {{> navbar }}
+    {{> underbar }}
+    <div class="content">
+        <div class="container">
+            {{> resultsbar }}
+            <table id="table-transform" data-toolbar="#transform-buttons" class="table">
+                <tbody>
+                    {{#each vysledky}}
+                        <tr>
+                            <td>{{PlusOne @index}}</td>
+                            <td>{{ids_alias}}</td>
+                            <td>{{jmeno}}</td>
+                            <td>{{rocnik}}</td>
+                            <td>{{nazev_tymu}}</td>
+                            <td>{{stat}}</td>
+                            <td>{{kod_kategorie}}</td>
+                            <td>{{rank_category}}</td>
+                            <td>{{pohlavi}}</td>
+                            <td>{{rank_gender}}</td>
+
+                            {{#each lap_time}}
+                                <td>{{this}}</td>
+                            {{/each}}
+
+                            <td>{{finish_time}}</td>
+                            <td>{{distance_overall}}</td>
+                        </tr>
+                    {{/each}}
+
+
+                </tbody>
+            </table>
+
+
+
+
+        </div>
+    </div>
+    {{> footer }}
+</div>
