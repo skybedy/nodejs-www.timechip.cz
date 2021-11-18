@@ -33,9 +33,9 @@ var client = new Twitter({
 
 var connection = mysql.createConnection({
     host     : 'localhost',
-    user     : 'skybedy',
-    password : 'mk1313life',
-    database : 'timechip_cz',
+    user     : '',
+    password : '',
+    database : '',
     charset: 'utf8mb4_czech_ci',
     multipleStatements: true
 });
